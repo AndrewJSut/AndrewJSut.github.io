@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="{{ "css/main.css" | relURL }}">
+  <meta charset="utf-8">
+  <title>{{ .Title }}</title>
+</head>
+<body>
+  {{ partial "nav.html" . }}
+
+  <main>
+    <h1>{{ .Title }}</h1>
+
+    {{ if .Date }}
+      <p><em>{{ .Date.Format "2006-01-02" }}</em></p>
+    {{ end }}
+
+    {{ .Content }}
+  </main>
+</body>
+</html>

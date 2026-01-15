@@ -1,0 +1,8 @@
+baseURL = "https://andrewjsut.github.io/"
+languageCode = "en-us"
+title = "Andrew Sutcliffe"
+disableKinds = ["taxonomy", "term", "RSS"]
+
+# For clean blog URLs:
+[permalinks]
+  blog = "/blog/:slug/"
