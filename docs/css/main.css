@@ -185,6 +185,17 @@ main h1 {
 
 .hero-content h1 {
   margin-bottom: 2.25rem;   /* space below name */
+  line-height: 1.05;
+}
+
+@media (max-width: 700px) {
+  .hero-content h1 {
+    max-width: 10.5ch;
+    margin-left: auto;
+    margin-right: auto;
+    padding-inline: 0.75rem;
+    text-wrap: balance;
+  }
 }
 
 /* Name */
@@ -362,6 +373,23 @@ ul li a:hover {
   font-size: 0.6rem;
   color: var(--muted-text);
   text-align: center;
+}
+
+@media (max-width: 700px) {
+  .site-footer {
+    border-top: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .site-footer::before {
+    content: "";
+    display: block;
+    width: 70%;
+    height: 1px;
+    margin: 0 auto 1.5rem;
+    background-color: rgba(0, 0, 0, 0.15);
+  }
 }
 
 /* =========================================================
