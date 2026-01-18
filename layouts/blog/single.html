@@ -1,36 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>{{ .Title }}</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="{{ "css/main.css" | relURL }}">
-</head>
-<body>
+{{ define "main" }}
+<main class="blog-post">
 
-  {{ partial "nav.html" . }}
+  <header class="blog-post-header">
+    <h1>{{ .Title }}</h1>
 
-  <main class="blog-post">
+    {{ with .Params.subtitle }}
+      <p class="blog-post-subtitle">{{ . }}</p>
+    {{ end }}
 
-    <header class="blog-post-header">
-      <h1>{{ .Title }}</h1>
+    <time class="blog-post-date">
+      {{ .Date.Format "January 02, 2006" }}
+    </time>
+  </header>
 
-      {{ with .Params.subtitle }}
-        <p class="blog-post-subtitle">{{ . }}</p>
-      {{ end }}
+  <article class="blog-post-content">
+    {{ .Content }}
+  </article>
 
-      <time class="blog-post-date">
-        {{ .Date.Format "January 02, 2006" }}
-      </time>
-    </header>
-
-    <article class="blog-post-content">
-      {{ .Content }}
-    </article>
-
-  </main>
-
-  {{ partial "footer.html" . }}
-
-</body>
-</html>
+</main>
+{{ end }}

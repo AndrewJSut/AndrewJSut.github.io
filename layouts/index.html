@@ -1,19 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="{{ "css/main.css" | relURL }}">
-  <meta charset="utf-8">
-  <title>{{ .Title }}</title>
-</head>
-<body>
-  {{ partial "nav.html" . }}
-
-  <main class="hero">
-    <div class="hero-content">
-      {{ .Content }}
-    </div>
-  </main>
-  {{ partial "footer.html" . }}
-</body>
-</html>
+{{ define "main" }}
+<main class="hero">
+  <div class="hero-content">
+    {{ .Content }}
+  </div>
+</main>
+{{ end }}

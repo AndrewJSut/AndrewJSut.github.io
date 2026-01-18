@@ -56,7 +56,7 @@ body {
                       radial-gradient(circle at 80% 20%, rgba(14, 165, 233, 0.1) 0%, transparent 50%);
   color: var(--text-color);
   line-height: 1.6;
-  max-width: 1200px;
+  /* max-width: 1200px; */
   font-weight: 400;
   min-height: 100vh;
 }
@@ -401,6 +401,22 @@ ul li a:hover {
   gap: 3rem;
 }
 
+@media (max-width: 600px) {
+  main,
+  .site-nav,
+  .blog-page,
+  .blog-post {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .hero {
+    padding: 4rem 0;
+  }
+}
+
 @media (max-width: 900px) {
   .skills-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -410,6 +426,12 @@ ul li a:hover {
 @media (max-width: 600px) {
   .skills-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .nav-right a {
+    padding: 0.5rem 0;
   }
 }
 
